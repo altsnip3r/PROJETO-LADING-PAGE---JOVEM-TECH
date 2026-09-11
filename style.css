@@ -1,0 +1,158 @@
+/* ========================================================== */
+/* GRADE DE DEVS (GRID DOS QUADRADINHOS)                      */
+/* ========================================================== */
+
+/* Faz os cards ficarem em colunas lado a lado automaticamente */
+.devs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* O cartão do aluno com a cor da segunda foto */
+.dev-card {
+  background-color: #0c182b; /* Azul escuro tecnológico */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borda fina quase invisível */
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dev-card:hover {
+  transform: translateY(-4px); /* Sobe um pouquinho ao passar o mouse */
+  border-color: #00ff87;       /* Borda acende no verde neon */
+}
+
+/* ========================================================== */
+/* TOPO DO CARD: FOTO + INFORMAÇÕES                          */
+/* ========================================================== */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaço entre a foto e o nome */
+  margin-bottom: 1rem;
+}
+
+/* A foto redondinha */
+.dev-avatar {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00ff87; /* Contorno verde */
+}
+
+.dev-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* A etiqueta de Back-End */
+.dev-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  width: fit-content;
+  letter-spacing: 0.5px;
+}
+
+.badge-backend {
+  background-color: rgba(59, 130, 246, 0.2); /* Azul translúcido */
+  color: #60a5fa;                           /* Azul claro */
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+/* Nome do aluno */
+.dev-name {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Localização */
+.dev-location {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+/* Bio / Descrição */
+.dev-bio {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+  flex-grow: 1; /* Garante que todos os cards fiquem alinhados */
+}
+
+/* ========================================================== */
+/* AS CAIXINHAS DE TECNOLOGIAS (TAGS/CHIPS)                  */
+/* ========================================================== */
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap; /* Se tiver muitas, quebra para a linha de baixo */
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Cada quadradinho cinza escuro */
+.skill-tag {
+  background-color: #14243b;
+  color: #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================================== */
+/* RODAPÉ DO CARD (ÍCONES + BOTÃO VER PERFIL)                */
+/* ========================================================== */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  filter: grayscale(1); /* Deixa os ícones neutros */
+  transition: filter 0.2s ease;
+}
+
+.social-links a:hover {
+  filter: grayscale(0); /* Fica colorido ao passar o mouse */
+}
+
+/* Botão "Ver Perfil" */
+.btn-perfil {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-perfil:hover {
+  background-color: #00ff87;
+  color: #050b14;
+  border-color: #00ff87;
+}
